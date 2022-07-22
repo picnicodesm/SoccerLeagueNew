@@ -63,12 +63,13 @@ class LeagueVM: ObservableObject {
                 ranking_EPL.loseGoal.append(try el.select("td").get(7).text())
                 ranking_EPL.gainAndLoseDiffrence.append(try el.select("td").get(8).text())
                 
-                let imgString = try el.select("td").get(0).select("a").select("img").attr("src").description
-                guard let urlImageString = URL(string: imgString) else { print("cna't make urlImageString"); return }
-                let data = try Data(contentsOf: urlImageString)
-                guard let img = UIImage(data: data) else { print("There is no image"); return}
-                ranking_EPL.img.append(Image(uiImage: img))
-                
+//              get Image from HTML
+//                let imgString = try el.select("td").get(0).select("a").select("img").attr("src").description
+//                guard let urlImageString = URL(string: imgString) else { print("cna't make urlImageString"); return }
+//                let data = try Data(contentsOf: urlImageString)
+//                guard let img = UIImage(data: data) else { print("There is no image"); return}
+//                ranking_EPL.img.append(Image(uiImage: img))
+//
                
             }
         } catch Exception.Error(_, let message) {

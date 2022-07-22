@@ -9,21 +9,28 @@ struct GameRow: View {
     let rowHeight: CGFloat = 80
     let borderColor: Color = .gray
     var body: some View {
+        let scoreArr = score.split(separator: " ").map { String($0) }
+        let leftTeam = scoreArr.first!
+        let rightTeam = scoreArr.last!
         HStack(alignment: .center) {
             Text("\(time)")
                 .font(.system(size: 14))
                 .frame(width: 60)
             Spacer()
+            Image(leftTeam)
+                .resizable()
+                .frame(width: 25, height: 25)
             Text("\(score)")
-                .font(.system(size: 20))
+                .font(.system(size: 16))
+            Image(rightTeam)
+                .resizable()
+                .frame(width: 25, height: 25)
             Spacer()
             Text("\(stadium)")
                 .font(.system(size: 12))
                 .frame(width: 80)
         }
-//        .padding(.horizontal)
         .frame(width: cardSize, height: rowHeight)
-//        .border(borderColor, width: 0.5)
         .overlay(Divider().background(.white), alignment: .bottom)
 //        .background(.gray) // for test
     }

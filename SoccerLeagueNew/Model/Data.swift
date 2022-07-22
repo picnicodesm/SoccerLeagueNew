@@ -23,6 +23,6 @@ struct LeagueModel {
         var goal: [String] = []
         var loseGoal: [String] = []
         var gainAndLoseDiffrence: [String] = []
-        var img: [Image] = []
+//        var img: [Image] = []
     }
 }

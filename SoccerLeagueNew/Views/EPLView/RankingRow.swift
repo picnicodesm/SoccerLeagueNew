@@ -24,7 +24,7 @@ struct RankingRow: View {
     var goal: String
     var loseGoal: String
     var gainAndLoseDiffrence: String
-    var img: Image
+//    var img: Image
     
     var body: some View {
         ScrollView(.horizontal) {
@@ -34,19 +34,14 @@ struct RankingRow: View {
                         .font(.system(size: 16))
                         .frame(width: boxWidth, height: rowHeight)
                     HStack(spacing: 0) {
-                        img
+                        Image(teamName)
                             .resizable()
                             .frame(width: 25, height: 25)
-//                            .border(.yellow, width: 0.5)
-                        
                         Text("\(teamName)")
                             .font(.system(size: 16))
-//                            .frame(height: rowHeight)
                             .frame(width: 140)
-//                            .border(.yellow, width: 0.5)
                     }
                     .frame(width: 200)
-//                    .border(.gray, width: 0.5)
                 }
                 
                 Group {
@@ -92,7 +87,7 @@ struct RankingRow_Previews: PreviewProvider {
     //    }
     
     static var previews: some View {
-        RankingRow(cardSize: 350, rank: "1", teamName: "수원 삼성 블루윙스", gameNum: "22", score: "47", win: "14", draw: "5", lose: "3", goal: "33", loseGoal: "19", gainAndLoseDiffrence: "14", img: Image(systemName: "applelogo"))
+        RankingRow(cardSize: 350, rank: "1", teamName: "수원 삼성 블루윙스", gameNum: "22", score: "47", win: "14", draw: "5", lose: "3", goal: "33", loseGoal: "19", gainAndLoseDiffrence: "14")
             .environmentObject(LeagueVM())
         
     }
