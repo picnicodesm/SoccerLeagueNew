@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var leagueVM: LeagueVM
     var body: some View {
         
         TabView {
@@ -10,26 +11,39 @@ struct ContentView: View {
                     Label("EPL", systemImage: "folder.circle")
                 }
             
-            Text("Second Screen")
+            KLView()
                 .tabItem {
                     Label("K League", systemImage: "paperplane.circle")
                 }
             
-            Text("Third Screen")
+            League1View()
                 .tabItem {
                     Label("League1", systemImage: "book.circle")
                 }
             
-            Text("Fourth Screen")
+            BundesView()
                 .tabItem {
                     Label("Bundes League", systemImage: "newspaper.circle")
                 }
             
-            Text("Fifth Screen")
+            LaligaView()
                 .tabItem {
                     Label("LaLiga", systemImage: "calendar.circle")
                 }
         }
+        .onAppear {
+            leagueVM.getSchedule(leagueNumber: 0)
+            leagueVM.getRanking(leagueNumber: 0)
+            leagueVM.getSchedule(leagueNumber: 1)
+            leagueVM.getRanking(leagueNumber: 1)
+            leagueVM.getSchedule(leagueNumber: 2)
+            leagueVM.getRanking(leagueNumber: 2)
+            leagueVM.getSchedule(leagueNumber: 3)
+            leagueVM.getRanking(leagueNumber: 3)
+            leagueVM.getSchedule(leagueNumber: 4)
+            leagueVM.getRanking(leagueNumber: 4)
+        }
+        
         
         
         

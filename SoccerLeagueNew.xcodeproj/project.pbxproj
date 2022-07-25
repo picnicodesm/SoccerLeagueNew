@@ -18,6 +18,10 @@
 		045B14902886A2A6007BF67D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B148F2886A2A6007BF67D /* Data.swift */; };
 		045CA9CF28892CDF00A6B814 /* RankingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CA9CE28892CDF00A6B814 /* RankingCard.swift */; };
 		045CA9D128892E9700A6B814 /* RankingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CA9D028892E9700A6B814 /* RankingRow.swift */; };
+		048B4400288D520400C821D1 /* LaligaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B43FF288D520400C821D1 /* LaligaView.swift */; };
+		048B4402288D520B00C821D1 /* League1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B4401288D520B00C821D1 /* League1View.swift */; };
+		048B4404288D521600C821D1 /* BundesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B4403288D521600C821D1 /* BundesView.swift */; };
+		04F237EC288AA219006BB726 /* KLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F237EB288AA219006BB726 /* KLView.swift */; };
 		E33A6F51588E9B6D483F8D35 /* Pods_SoccerLeagueNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03D5729EB1EE9AD8EAF244 /* Pods_SoccerLeagueNew.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		045B148F2886A2A6007BF67D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		045CA9CE28892CDF00A6B814 /* RankingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCard.swift; sourceTree = "<group>"; };
 		045CA9D028892E9700A6B814 /* RankingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRow.swift; sourceTree = "<group>"; };
+		048B43FF288D520400C821D1 /* LaligaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaligaView.swift; sourceTree = "<group>"; };
+		048B4401288D520B00C821D1 /* League1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League1View.swift; sourceTree = "<group>"; };
+		048B4403288D521600C821D1 /* BundesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundesView.swift; sourceTree = "<group>"; };
+		04F237EB288AA219006BB726 /* KLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLView.swift; sourceTree = "<group>"; };
 		1D03D5729EB1EE9AD8EAF244 /* Pods_SoccerLeagueNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerLeagueNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		314DEE46F1B002BDADF1030D /* Pods-SoccerLeagueNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerLeagueNew.debug.xcconfig"; path = "Target Support Files/Pods-SoccerLeagueNew/Pods-SoccerLeagueNew.debug.xcconfig"; sourceTree = "<group>"; };
 		38161AB5E8C37DA1E1B3F941 /* Pods-SoccerLeagueNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerLeagueNew.release.xcconfig"; path = "Target Support Files/Pods-SoccerLeagueNew/Pods-SoccerLeagueNew.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,21 +102,22 @@
 		045B148A28869B6D007BF67D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				045B148B28869B76007BF67D /* EPLView */,
+				04F237EA288AA1D6006BB726 /* CardsAndRows */,
+				045B148B28869B76007BF67D /* LeagueViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		045B148B28869B76007BF67D /* EPLView */ = {
+		045B148B28869B76007BF67D /* LeagueViews */ = {
 			isa = PBXGroup;
 			children = (
 				045B148828856CF2007BF67D /* EPLView.swift */,
-				045B148C2886A128007BF67D /* ScheduleCard.swift */,
-				04006E5128881CF200638813 /* GameRow.swift */,
-				045CA9CE28892CDF00A6B814 /* RankingCard.swift */,
-				045CA9D028892E9700A6B814 /* RankingRow.swift */,
+				04F237EB288AA219006BB726 /* KLView.swift */,
+				048B43FF288D520400C821D1 /* LaligaView.swift */,
+				048B4401288D520B00C821D1 /* League1View.swift */,
+				048B4403288D521600C821D1 /* BundesView.swift */,
 			);
-			path = EPLView;
+			path = LeagueViews;
 			sourceTree = "<group>";
 		};
 		045B148E2886A228007BF67D /* Model */ = {
@@ -117,6 +126,17 @@
 				045B148F2886A2A6007BF67D /* Data.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04F237EA288AA1D6006BB726 /* CardsAndRows */ = {
+			isa = PBXGroup;
+			children = (
+				045B148C2886A128007BF67D /* ScheduleCard.swift */,
+				04006E5128881CF200638813 /* GameRow.swift */,
+				045CA9CE28892CDF00A6B814 /* RankingCard.swift */,
+				045CA9D028892E9700A6B814 /* RankingRow.swift */,
+			);
+			path = CardsAndRows;
 			sourceTree = "<group>";
 		};
 		7F834E2A6187E333B1A24068 /* Frameworks */ = {
@@ -253,11 +273,15 @@
 				045CA9CF28892CDF00A6B814 /* RankingCard.swift in Sources */,
 				045B148928856CF2007BF67D /* EPLView.swift in Sources */,
 				045CA9D128892E9700A6B814 /* RankingRow.swift in Sources */,
+				048B4402288D520B00C821D1 /* League1View.swift in Sources */,
+				04F237EC288AA219006BB726 /* KLView.swift in Sources */,
 				045B14902886A2A6007BF67D /* Data.swift in Sources */,
 				045B148D2886A128007BF67D /* ScheduleCard.swift in Sources */,
 				045B14742885148D007BF67D /* ContentView.swift in Sources */,
+				048B4400288D520400C821D1 /* LaligaView.swift in Sources */,
 				045B14722885148D007BF67D /* SoccerLeagueNewApp.swift in Sources */,
 				045B148028851890007BF67D /* LeagueVM.swift in Sources */,
+				048B4404288D521600C821D1 /* BundesView.swift in Sources */,
 				04006E5228881CF200638813 /* GameRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
